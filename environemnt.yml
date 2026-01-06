@@ -1,0 +1,33 @@
+name: video_retrieval_v3
+
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - ffmpeg
+  - pip
+  - faiss-gpu
+
+  - pip:
+      - torch
+      - torchvision
+      - --index-url https://download.pytorch.org/whl/cu121
+
+      - scenedetect[opencv]
+      - ffmpeg-python
+
+      - numpy
+      - pandas
+
+      - transformers
+      - easydict
+      - timm
+      - loguru
+      
+      - gdown
+
+      - git+https://github.com/lyakaap/ISC21-Descriptor-Track-1st

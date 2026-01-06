@@ -1,0 +1,39 @@
+query, store files for loading all models, loading faiss shot db, setting variables and calling sub functions
+
+
+
+store:
+ - extract isc features + store in folder.
+ - ffmpeg shot detect (phash)
+ - take 16 equally spaced frames per shot and extract embeddings using videomae?.
+ - store each embedding in faiss shot db
+ - update metadata file which has one entry per video with video_id, title, isc_features_path
+
+
+query
+ - extract isc features
+ - shot detection
+ - shot frame extraction
+ - shot embeddings
+
+ - create video_candidates set (videos we'll do transvcl comparisons on later)
+ - for each shot:
+    - search shot in db for top k similar shots
+    - for each candidate shot, add video_id to video_candidates if not already in it
+
+ - for each video in video_candidates
+   - run compare_isc_features (TransVCL) and add to predictions 
+
+ - Keep top k predictions or predictions above threshold.
+
+ - Print out results
+
+
+functions needed: 
+ - extract_isc_features (return vectors), 
+ - store_isc_features (takes vectors and store them in file)
+ - compare_isc_features (takes two vector arrays and runs transvcl process to get predictions)
+
+
+
+
