@@ -10,13 +10,8 @@ A two-stage video retrieval system combining:
 
 ### Create and activate Conda environment
 ```bash
-conda create -n video_retrieval_v3 python=3.10
+conda env create -f environment.yml
 conda activate video_retrieval_v3
-```
-
-### Install dependencies
-```bash
-conda env update -f environment.yml
 ```
 
 ---

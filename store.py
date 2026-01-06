@@ -180,7 +180,7 @@ def main():
     # --- CONFIGURATION ---
     # List of videos or a directory walk
     video_paths = [
-        '/home/sam/reverse-video-search/videos/bigbuckbunny/bigbuckbunny.mp4'
+        'assets/video.mp4'
     ]
     
     index_path = "db/shots.faiss"

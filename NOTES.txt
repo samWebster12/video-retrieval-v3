@@ -2,3 +2,4 @@
 - add option to skip videomae and isc embedding extraction if file already exists 
 - create web version
 - running TransVCL on long videos (hours) prob don't work so well because 2d image gets so big. maybe only do on +- detected shot depending on size of input?
+- transvcl kind of sucks. Consider using 2d similarity map of super embeddings and training new object detection model to detect alignments.
