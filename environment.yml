@@ -1,4 +1,4 @@
-name: video_retrieval_v3_cp2
+name: video_retrieval_v3
 
 channels:
   - pytorch
